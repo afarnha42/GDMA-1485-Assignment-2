@@ -60,27 +60,44 @@
 	box-sizing: border-box;
 }
 
+a {
+	display: inline-block;
+}
 #hero { 
   	background: url("../img/hero.jpg") no-repeat center center scroll; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	height: 650px;
+	padding-bottom: 100px;
+}
+
+#about {
+ 	background: url("../img/about.jpeg") no-repeat center center scroll; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	padding-bottom: 100px;
 }
 
 img {
 	 background: url("../img/logo.png")
 }
 
-img, .card:first-child {
+header .row div, .card:first-child, body > div nav {
 	float: left;
 }
-
-nav, .card:last-child {
+header .row div {
+	width: 200px;
+}
+header nav, .card:last-child, #col {
 	float: right;
 }
 
+#col {
+	width: 800px;
+}
 .card {
 	width: 500px;
 }
@@ -89,25 +106,49 @@ nav, .card:last-child {
 	margin: 20px 0;
 }
 
-.card p {
+.card p, #conserve p {
 	font: 400 22px "EB garamond";
-	text-align: center;
 }
 
 .card a {
 	margin: 0 auto;
 }
-footer ul:first-child {
-	background-color: #36B3AC;
-	margin-bottom: 0;
-}
-footer ul:last-child {
-	background-color: #1f1f1f;
-	margin-top: 0;
 
-}
+
 footer a:hover {
 	color: #36b3ac;
+}
+footer {
+	font: 400 15px 'montserrat';
+}
+
+footer {
+	background-color: #36B3AC;
+}
+footer div:last-child {
+	background-color: #1F1F1F;
+}
+footer span {
+	display: none;
+}
+#sprites li a {
+	width: 25px;
+	height: 25px;
+}
+
+#sprites li:first-child a {
+	background: url("../img/fb.png") no-repeat 0 0;
+}
+
+#sprites li:nth-child(2) a {
+	background: url("../img/flickr.png") no-repeat 0 0;
+}
+#sprites li:last-child a {
+	background: url("../img/twitter.png") no-repeat 0 0;
+}
+
+#sprites li a:hover {
+	background-position: 0 -25px;
 }
 /*--------------------------------------------------------------
 4.0 - ELEMENTS
@@ -121,26 +162,19 @@ footer a:hover {
 /* -- TABLES -- */
 
 /* -- TYPOGRAPHY -- */
-h1 {
+#hero p:first-of-type, #about h1 {
 	font: 700 90px "montserrat";
-	text-align: center;
-	padding-top: 150px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
 	
 }
 
-h2 {
-	font: 30px "eb garamond";
-	text-align: center;
-}
-
-h3 {
+h2, body > div > nav li {
 	font: 18px "source sans pro";
 	color: #BDBDBD;
 	text-transform: uppercase;
-	text-align: center;
 }
+
 
 /*--------------------------------------------------------------
 5.0 - OBJECTS
@@ -157,11 +191,14 @@ h3 {
 /*--------------------------------------------------------------
 6.0 - COMPONENTS
 -------------------------------------------------------------- */
-
+#hero + div, #hero, footer, #about h1 {
+	text-align: center;
+}
 
 /* -- BUTTONS -- */
+
+
 .btn {
-	width: 130px;
 	-webkit-border-radius: 40px;
 	-ms-border-radius: 40px;
 	-o-border-radius: 40px;
@@ -169,10 +206,16 @@ h3 {
 	border-radius: 40px;
 	text-decoration: none;
 	padding: 10px;
-	background: #000;
+	background: #36B3AC;
+	margin: 0 auto;
 }
 
-h1, a {
+.btn:hover {
+	background-color: #000;
+}
+
+	
+#hero div:last-child p, #about p, .btn, header a, footer a, #about h1 {
 	color: #fff;
 }
 a {
@@ -182,34 +225,53 @@ a {
 }
 
 
-/* -- HEADER -- */
-h1 span {
-	font: italic 400 30px "eb garamond";
-	text-transform: lowercase;
-}
 
-header .btn {
+/* -- HEADER -- */
+
+header {
 	margin: 0 auto;
 }
 
 
 
 /* -- NAVIGATION -- */
-li {
+header li {
 	display: inline-block;
 	padding: 10px;
-		text-align: center;
+}
+
+
+header nav li:last-child a {
+
+	-webkit-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid #fff;
+}
+
+header nav li:last-child a:hover {
+	background-color: #fff;
+	color: #000;
 	
 }
 
-nav a:hover {
+
+header nav a:hover {
 	color: #000;
+}
+
+#about + div ul {
+	list-style-type: none;
+	padding: 0px;
 }
 
 #conserve {
 	width: 700px;
 	margin: 0 auto;
-	text-align: center;
 	
 }
 
@@ -217,12 +279,36 @@ nav a:hover {
 	font-style: italic;
 }
 
-#conserve span {
+#conserve p:last-child a, body > div > nav p {
 	color: #36B3AC;
+	font: italic 400 20px "eb garamond";
+	text-transform: Capitalize;
 }
 
+
+
+body > div > nav a {
+	color: #1F1f1f;
+}
+
+#conserve p:last-child, #mission p {
+	color: #000;
+	font: italic 400 20px "eb garamond";
+}
+#conserve p:last-child a:hover {
+	color: #000;
+}
 headerp:first-child {
 	font: 25px "eb garamond";
+}
+
+#hero div:last-child p span {
+	font: italic 400 30px "eb garamond";
+	text-transform: capitalize;
+}
+
+.lead {
+	font: 400 35px "eb garamond";
 }
 
 /*--------------------------------------------------------------
