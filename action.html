@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i&vert;Montserrat:400,600,700&vert;Source+Sans+Pro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i&vert;Montserrat:400,600,700&vert;Source+Sans+Pro&display=swap" rel="stylesheet">
 	
 <title>Bedford Foundation &vert; Take Action</title>
 </head>
 
 <body>
-		<header id="action">
+		<header id="action-bg">
 			<div class="wrapper">
 					<div class="row">
 						<div>
-							<p> <img src="img/logo.png" alt="bedford foundation" width="200"></p>
+							<img src="img/logo.png" alt="bedford foundation" width="200">
 						</div>
 						<nav>
 							<ul>
@@ -29,7 +29,7 @@
 			</div>
 		</header>
 	
-	<div class="wrapper">
+	<section class="wrapper">
 		<p class="lead">You can make a difference. Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit. Vivamus scelerisque enim non<br> augue fringilla, sit amet vehicula orci faucibus. </p>
 		<div class="row">
 			<div class="col-1-3">
@@ -53,40 +53,34 @@
 				<p>Donec blandit, arcu a dapibus iaculis, velit nisi luctus libero, eu maximus ligula diam eget ante. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  </p>
 				<p><a href="#" class="btn">join the foundation</a></p>
 			</div>
-			
-			
 		</div>
-		<form>
-			<fieldset>
-				<legend>Sign up to volunteer!</legend>
-				<div class="row">
-					<label>
-					First Name
-						<input type="text" name="first-name">
-					</label>
-					<label>
-					Last Name
-						<input type="text" name="last-name">
-					</label>
-				</div>
-				<label>
-				Email Address
-					<input type="text" name="email">
-				</label>
-				<label for="involvement">I would like to get involved with:</label>
-					<input type="text" name="involvement" list="involvement">
-					<datalist>
-						<option value="test1"></option>
-						<option value="test2"></option>
-					</datalist>
+			
+			
+	</section>
+	<form>
+		<header>
+			<h3>Sign up to volunteer!</h3>
+		</header>
+			<div class="row">
+				<label for="first-name">first name</label>
+				<input type="text" name="first-name" id="first_name">
 
-				
+				<label for="last-name">last name</label>
+				<input type="text" name="last-name" id="last_name">
+			</div>
+			<label for="email">email address</label>
+			<input type="text" name="email" id="e-mail">
+
+			<label for="involvement">I would like to get involved with:</label>
+				<input type="text" name="involvement" list="involvement">
+				<datalist>
+					<option value="test1"></option>
+					<option value="test2"></option>
+				</datalist>
 			
-			</fieldset>
-			
-		</form>
-	</div>
-	
+	</form>
+
+
 	
 </body>
 </html>
